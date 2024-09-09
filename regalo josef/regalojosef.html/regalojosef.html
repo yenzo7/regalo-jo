@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicca</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0; /* Rimuove margini predefiniti */
+            background-image: url('sfondojo.JPG'); /* Sostituisci con il percorso della tua immagine */
+            background-size: 80%; /* Adatta l'immagine per coprire l'intero sfondo */
+            background-position: center; /* Centra l'immagine */
+            background-repeat: no-repeat; /* Non ripetere l'immagine */
+            position: relative; /* Necessario per il posizionamento assoluto del pulsante */
+        }
+        h1 {
+            color: #4CAF50;
+            margin-top: 50px; /* Distanza dal bordo superiore */
+        }
+        p {
+            font-size: 18px;
+        }
+        #sorpresa {
+            display: none; /* Nasconde il messaggio all'inizio */
+            color: #FF5733;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            position: absolute; /* Posizionamento assoluto */
+            top: 120px; /* Regola questa distanza per posizionare il pulsante sopra l'immagine */
+            left: 50%; /* Centrato orizzontalmente */
+            transform: translateX(-50%); /* Centrato orizzontalmente */
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .image-container {
+            position: relative;
+            display: inline-block;
+            margin-top: 100px; /* Distanza dal margine superiore per il pulsante */
+        }
+        .image-container img {
+            width: 300px; /* Imposta la larghezza dell'immagine */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>AUGURI JOSEF!!</h1>
+    <p>C'È UNA SORPRESA PER TE</p>
+
+    <!-- Pulsante per la sorpresa -->
+    <button onclick="mostraSorpresa()">Clicca qui!</button>
+
+    <!-- Contenitore dell'immagine -->
+    <div class="image-container">
+        <img src="fotojo.JPG" alt="Foto di Josef">
+    </div>
+
+    <!-- Messaggio a sorpresa nascosto -->
+    <p id="sorpresa">🎉 HAI APPENA VINTO 4 MESI DI SPOTIFY GRATUITI! 🎉</p>
+
+    <script>
+        // Funzione che mostra il messaggio nascosto
+        function mostraSorpresa() {
+            document.getElementById("sorpresa").style.display = "block";
+        }
+    </script>
+</body>
+</html>
