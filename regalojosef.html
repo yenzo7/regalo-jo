@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messaggio Speciale</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        p {
+            font-size: 18px;
+        }
+        #sorpresa {
+            display: none; /* Nasconde il messaggio all'inizio */
+            color: #FF5733;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ciao [Nome del Tuo Amico]!</h1>
+    <p>Questo è un messaggio speciale solo per te:</p>
+    <p>[Il tuo messaggio principale qui]</p>
+
+    <!-- Pulsante per la sorpresa -->
+    <button onclick="mostraSorpresa()">Clicca qui per una sorpresa!</button>
+
+    <!-- Messaggio a sorpresa nascosto -->
+    <p id="sorpresa">🎉 Sorpresa! Sei fantastico, non dimenticarlo mai! 🎉</p>
+
+    <script>
+        // Funzione che mostra il messaggio nascosto
+        function mostraSorpresa() {
+            document.getElementById("sorpresa").style.display = "block";
+        }
+    </script>
+</body>
+</html>
